@@ -1,5 +1,5 @@
 ## Commit
 ## Branches
 ## Remotes
-## Merging
 ## Stashing
+## Merging
