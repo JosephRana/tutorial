@@ -18,7 +18,53 @@ git clone https://github.com/Muhammadyousafrana/tutorial.git
 cd tutorial
 ```
 
-### Git Hidden Folder
+> You'll need to Generate a Personal Access Token (PAT)
+
+```md
+https://github.com/settings/personal-access-tokens
+```
+
+You'll use `PAT` as your password when you login when you're pushing files from local environment
+
+- Give permisson to commits
+
+### SSH
+
+```sh
+git clone git@github.com:Muhammadyousafrana/tutorial.git
+cd tutorial
+```
+
+> Most of the time it show's that access is denied if you try to clone or push the file in this case we've need to generate a `ssh key` by using the following command:
+
+```sh
+ssh-keygen -t rsa
+#after the above command it will ask you to enter the name of file and you will enter the name of file with root directory to `.ssh` folder and copy the key with extention `.pub` and add in github ssh-key and for Local terminal use the below commands
+eval "$(ssh-agent -s)"
+ssh-add /c/Users/muham/.ssh/github-alt_id_rsa
+# finally Test that authentication is added successfully
+ssh -T git@github.com
+```
+
+- it will ask you enter the name of file and you've need to enter the name in the following directory:
+`/c/Users/muham/.ssh/github-alt_id_rsa`
+- and then use the cat comand to view and copy the key and add into the github repo a `ssh public key` 
+
+### GitHub CLI
+
+> Download and intall the github cli using the following link:
+
+```md
+[link](https://cli.github.com/)
+```
+
+- open the command line and enter the following command to authenticate with cli:
+
+```md
+gh auth login
+```
+
+## Git Hidden Folder
 
 there is a hidden flder called `.git` which tell you that your project is a github repo.
 
@@ -91,6 +137,24 @@ git push
 ```
 
 ## Branches
+
+> show the list of branches
+
+```md
+git branch
+```
+
+> Create a New Branch
+
+```md
+git branch branch_name
+```
+
+> checkout the branch
+
+```md
+git checkout branch_name
+```
 
 ## Remotes
 
