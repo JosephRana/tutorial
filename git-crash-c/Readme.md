@@ -158,9 +158,42 @@ git checkout branch_name
 
 ## Remotes
 
+`git remote add <name> <url>`
+This command adds a new remote repository to your local Git project. It establishes a connection between your local repository and the remote repository.
+
+- `name` The name you want to give to this remote, typically origin (but you can name it anything).
+- `url` The URL of the remote repository (e.g., a GitHub, GitLab, or Bitbucket repo).
+
+```sh
+git remote add origin https://github.com/user/repo.git
+```
+
+we add remote but often you'll just add remote via upstream when adding a branch
+
+```sh
+git remote add ...
+git branch -u origin new-feature
+```
+
 ## Stashing
 
+Saved working directory and index state WIP on dev:
+
+```sh
+git stash
+# if you want to specify the name
+git stash save stash-name
+git stash apply # same as pop
+git stash list
+git stash pop
+```
+
 ## Merging
+
+```sh
+git checkout dev
+git merge main
+```
 
 ## Add
 
